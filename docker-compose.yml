@@ -84,8 +84,6 @@ services:
     depends_on:
       - odoo
     tty: true
-    expose:
-      - 80/tcp
     volumes:
       - ./nginx/nginx.conf:${NGINX_CONF}
       - ./nginx/default.conf:${NGINX_DEFAULT_CONF}
@@ -103,6 +101,9 @@ services:
     depends_on:
       - nginx
     tty: true
+    ports:
+      - 80:80
+      - 443:443
     volumes:
       - ./nginx-proxy/nginx.conf:${NGINX_CONF}
       - ./nginx-proxy/cors.conf:${NGINX_PROXY_CORS_CONF}
