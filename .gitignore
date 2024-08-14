@@ -9,3 +9,7 @@ docker-compose.override.yml
 
 # Ignores any __pycache__ folder.
 __pycache__
+
+
+# odoo crm app file stores
+/odoo-data

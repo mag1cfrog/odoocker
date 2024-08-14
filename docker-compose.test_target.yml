@@ -1,0 +1,11 @@
+services:
+  odoo:
+    volumes:
+      - type: bind
+        source: ./odoo-data/test_target
+        target: /var/lib/odoo
+  
+  nginx:
+    environment:
+      VIRTUAL_HOST: "erp.odoocker.test.target"
+      LETSENCRYPT_HOST: "erp.odoocker.test.target"
