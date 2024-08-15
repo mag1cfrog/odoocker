@@ -10,5 +10,9 @@ services:
       VIRTUAL_HOST: "erp.odoocker.test.source"
       LETSENCRYPT_HOST: "erp.odoocker.test.source"
 
+  postgres:
+    ports:
+      - 5433:5432
+
 
       
