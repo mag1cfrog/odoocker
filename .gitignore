@@ -13,3 +13,6 @@ __pycache__
 
 # odoo crm app file stores
 /odoo-data
+
+# temp folder
+/temp
